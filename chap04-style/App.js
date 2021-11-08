@@ -1,34 +1,24 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
+import { viewStyles, textStyles } from "./styles";
+import { Header, Contents, Footer } from "./components/Layout";
+import ShadowBox from "./components/ShadowBox";
+import Button from "./components/Button";
+import Input from "./components/Input";
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Inline Styling - Text</Text>
-      <Text style={styles.error}>Inline Styling - Error</Text>
+    <View style={viewStyles.container}>
+      <Header />
+      <ShadowBox />
+      <Button title="Seondal" />
+      <Button title="React Native" />
+      <Input borderColor="#3498db" />
+      <Input borderColor="#9b59b6" />
+      <Contents />
+      <Footer />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    padding: 10,
-    fontSize: 26,
-    fontWeight: "600",
-    color: "black",
-  },
-  error: {
-    padding: 10,
-    fontSize: 26,
-    fontWeight: "400",
-    color: "red",
-  },
-});
 
 export default App;
