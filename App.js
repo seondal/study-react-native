@@ -1,3 +1,3 @@
-import App from "./chap04-style/App";
+import App from "./chap05-todo/App";
 
 export default App;
