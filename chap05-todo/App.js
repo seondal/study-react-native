@@ -9,10 +9,20 @@ const Container = styled.View`
   justify-content: center;
 `;
 
+const Title = styled.Text`
+  font-size: 40px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.main};
+  align-self: flex-start;
+  margin: 0px 20px;
+`;
+
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container></Container>
+      <Container>
+        <Title>Todo List</Title>
+      </Container>
     </ThemeProvider>
   );
 }
